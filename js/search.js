@@ -42,7 +42,7 @@ async function searchMovies(query) {
 
     try {
         const response = await fetch(
-            `https://retroflix.yellowflash-cloud7775.workers.dev/api/search/multi?query=${encodeURIComponent(query)}`
+            `https://api.themoviedb.org/3/search/multi?api_key=ec5e6c3df989f7d2c96d3103cfa8d8bd&query=${encodeURIComponent(query)}`
         );
         const data = await response.json();
         

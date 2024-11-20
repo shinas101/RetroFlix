@@ -23,12 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loadDetails(id, type) {
+    const API_KEY = 'ec5e6c3df989f7d2c96d3103cfa8d8bd';
     try {
-        const response = await fetch(`https://retroflix.yellowflash-cloud7775.workers.dev/api/details/${type}/${id}`);
-        const data = await response.json();
+        const detailsResponse = await fetch(
+            `https://api.themoviedb.org/3/${type}/${id}?api_key=${API_KEY}&language=en-US`
+        );
+        const details = await detailsResponse.json();
         
-        tmdbData = data.details;
-        updateDetailsUI(data.details, data.credits, data.similar);
+        const creditsResponse = await fetch(
+            `https://api.themoviedb.org/3/${type}/${id}/credits?api_key=${API_KEY}`
+        );
+        const credits = await creditsResponse.json();
+        
+        const similarResponse = await fetch(
+            `https://api.themoviedb.org/3/${type}/${id}/similar?api_key=${API_KEY}`
+        );
+        const similar = await similarResponse.json();
+        
+        tmdbData = details;
+        updateDetailsUI(details, credits, similar);
     } catch (error) {
         console.error('Error loading details:', error);
         showError();
