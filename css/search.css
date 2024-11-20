@@ -1,0 +1,33 @@
+/* Search Styles */
+.search-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    background: var(--card-bg);
+    border: 2px solid var(--neon-blue);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+}
+
+/* ... rest of search styles ... */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Search-specific responsive styles */
+} 

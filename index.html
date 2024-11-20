@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-toggle-btn">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </button>
+    </div>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="retro-title">RETRO FLIX</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="SEARCH MOVIES & TV SHOWS..." class="search-input">
+                <button id="searchButton" class="search-button">
+                    <span class="button-text">SEARCH</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Movies Section -->
+        <section class="movies-section">
+            <h2 class="section-title">TRENDING MOVIES</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn">◀</button>
+                <div class="movie-slider" id="movieSlider"></div>
+                <button class="slider-btn next-btn">▶</button>
+            </div>
+        </section>
+
+        <!-- TV Shows Section -->
+        <section class="tv-section">
+            <h2 class="section-title">POPULAR TV SHOWS</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn">◀</button>
+                <div class="tv-slider" id="tvSlider"></div>
+                <button class="slider-btn next-btn">▶</button>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="active">HOME</a>
+            <a href="search.html">SEARCH</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
