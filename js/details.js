@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadDetails(id, type) {
     try {
-        const response = await fetch(`http://localhost:5000/api/details/${type}/${id}`);
+        const response = await fetch(`https://retroflix.yellowflash-cloud7775.workers.dev/api/details/${type}/${id}`);
         const data = await response.json();
         
         tmdbData = data.details;
@@ -40,7 +40,7 @@ async function loadDownloads(title) {
         const downloadsGrid = document.querySelector('.downloads-grid');
         downloadsGrid.innerHTML = '<div class="downloads-loading">LOADING DOWNLOADS...</div>';
 
-        const response = await fetch(`http://localhost:5000/api/search?q=${encodeURIComponent(title)}`, {
+        const response = await fetch(`https://retroflix.yellowflash-cloud7775.workers.dev/api/search?q=${encodeURIComponent(title)}`, {
             method: 'GET',
             mode: 'cors',
             headers: {

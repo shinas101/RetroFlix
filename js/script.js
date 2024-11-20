@@ -84,7 +84,7 @@ function setupSliderButtons(slider) {
 
 async function loadTrendingMovies() {
     try {
-        const response = await fetch('http://localhost:5000/api/trending/movies');
+        const response = await fetch('https://retroflix.yellowflash-cloud7775.workers.dev/api/trending/movies');
         const data = await response.json();
         updateMovieSlider(data.results);
     } catch (error) {
@@ -94,7 +94,7 @@ async function loadTrendingMovies() {
 
 async function loadPopularTVShows() {
     try {
-        const response = await fetch('http://localhost:5000/api/tv/popular');
+        const response = await fetch('https://retroflix.yellowflash-cloud7775.workers.dev/api/tv/popular');
         const data = await response.json();
         updateTVSlider(data.results);
     } catch (error) {
