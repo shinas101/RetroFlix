@@ -2,7 +2,10 @@
 
 ## Overview
 
-Retro Flix is a retro-themed movie download website with an engaging dark and light theme toggle. It allows users to search for movies and download them conveniently. The project is built using Flask as the backend, HTML, JavaScript for the frontend, and MongoDB as the database. The themes and features are shown in the provided screenshots.
+Retro Flix is a retro-themed movie download website.The project is built using Flask as the backend, HTML, JavaScript for the frontend, and MongoDB as the database.
+
+## Demo :
+https://retroflix.ddlheaven.site
 
 ## Features
 
