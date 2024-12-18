@@ -20,7 +20,7 @@ CORS(app, resources={
 })
 
 # MongoDB Configuration
-client = MongoClient("mongodb+srv://notpointbreak:Password246M@cluster0.gzxc2sc.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient(getenv('MONGO_URI'))
 db = client.get_database('bifrost')
 links = db.gdtot
 

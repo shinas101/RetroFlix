@@ -4,26 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchResults = document.querySelector('.search-results');
     let timeoutId;
 
-    // Theme toggle
+    
     const themeToggle = document.getElementById('themeToggle');
     themeToggle.addEventListener('click', toggleTheme);
     initTheme();
 
-    // Search button click
+    
     searchButton.addEventListener('click', () => {
         if (searchInput.value.trim().length > 2) {
             searchMovies(searchInput.value.trim());
         }
     });
 
-    // Enter key press
+    
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && searchInput.value.trim().length > 2) {
             searchMovies(searchInput.value.trim());
         }
     });
 
-    // Real-time search (optional)
+    
     searchInput.addEventListener('input', () => {
         clearTimeout(timeoutId);
         if (searchInput.value.trim().length > 2) {

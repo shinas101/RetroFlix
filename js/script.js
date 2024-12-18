@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme toggle
+
     const themeToggle = document.getElementById('themeToggle');
     themeToggle.addEventListener('click', toggleTheme);
     initTheme();
 
-    // Load content
+ 
     loadTrendingMovies();
     loadPopularTVShows();
 
-    // Initialize sliders
+    
     initializeSliders();
 });
 
@@ -16,11 +16,11 @@ function initializeSliders() {
     const movieSlider = document.getElementById('movieSlider');
     const tvSlider = document.getElementById('tvSlider');
 
-    // Initialize both sliders
+    
     initializeDraggableSlider(movieSlider);
     initializeDraggableSlider(tvSlider);
 
-    // Setup button controls for both sliders
+    
     setupSliderButtons(movieSlider);
     setupSliderButtons(tvSlider);
 }
@@ -36,7 +36,7 @@ function initializeDraggableSlider(slider) {
         startX = e.pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
         
-        // Prevent default drag behavior
+        
         e.preventDefault();
     });
 
@@ -54,11 +54,11 @@ function initializeDraggableSlider(slider) {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // Scroll speed multiplier
+        const walk = (x - startX) * 2; 
         slider.scrollLeft = scrollLeft - walk;
     });
 
-    // Set initial cursor style
+    
     slider.style.cursor = 'grab';
 }
 
@@ -132,7 +132,7 @@ function updateTVSlider(shows) {
     `).join('');
 }
 
-// Theme functions
+
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
