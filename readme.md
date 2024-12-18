@@ -49,9 +49,19 @@ https://retroflix.ddlheaven.site
      MONGO_URI=your_mongo_database_uri
      API_KEY=your_api_key_for_movie_data
      ```
+   - Example data for mongodb :
+     ```
+     {"_id":{"$oid":"643b6b327c3fe343efe9589f"},
+     "id":"20",
+     "title":"Code.M.S02.S02.E04.1080p.VOOT.WEB-DL.DD5.1.H.264-Archie.mkv",
+     "imdbId":"tt27187926",
+     "link":"https://new6.gdtot.cfd/file/1566457617",
+     "size":"1.46 GB",
+     "indexTitle":"Code M S02 S02 E04 1080"}```
+     
 6. Run the application:
    ```bash
-   flask run
+   python run.py
    ```
 7. Open your browser and navigate to `http://127.0.0.1:5000`.
 
